@@ -1,20 +1,24 @@
-/*
+@font-face {
+  font-family: LexendDeca Regular Mod;
+  src: url(../fonts/LexendDeca-Regular-Mod.ttf);
+}
+@font-face {
+  font-family: LexendDeca Bold Mod;
+  src: url(../fonts/LexendDeca-Bold-Mod.ttf);
+}
 
-The Town
-
-https://templatemo.com/tm-525-the-town
-
-*/
-
-
-html {
-  font-size: 18px;
-  --c-primary: #c57e7d;
-  --c-primary-dark: #9b6564;
+:root {
+  /*--c-primary: #c57e7d;
+  --c-primary-highlighted: #9b6564;*/
+  --c-primary: #4873d1;
+  --c-primary-highlighted: #4d97e5;
+  --c-text: #454545;
 }
 
 body {
-  color: #8f8f8f;
+  font-size: 18px;
+  font-family: 'LexendDeca Regular Mod';
+  color: var(--c-text);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -26,7 +30,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--c-primary-dark);
+  color: var(--c-primary-highlighted);
   text-decoration: none;
 }
 
@@ -42,8 +46,23 @@ a:focus {
   background-color: #ced4da;
 }
 
+.tm-logo {
+  width: 40px;
+  border-radius: 50%;
+}
+.branding {
+  display: none;
+}
+.tm-navbar.scroll .branding {
+  display: inline-block;
+}
+
 .tm-section-pad-top {
   padding-top: 135px;
+}
+
+.tm-section-pad-bottom {
+  padding-bottom: 135px;
 }
 
 .tm-text-primary {
@@ -58,13 +77,14 @@ a:focus {
   color: white;
   background-color: var(--c-primary);
   padding: 14px 35px;
-  border-radius: 30px;
+  border-radius: 7px;
+  text-transform: uppercase;
 }
 
 .tm-btn-primary:hover,
 .tm-btn-primary:focus {
   color: white;
-  background-color: var(--c-primary-dark);
+  background-color: var(--c-primary-highlighted);
 }
 
 /* Navbar */
@@ -86,6 +106,8 @@ a:focus {
   color: white;
   font-size: 1.4rem;
   font-weight: bold;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navbar-brand:hover,
@@ -94,7 +116,7 @@ a:focus {
 }
 
 .tm-navbar.scroll .navbar-brand {
-  color: #8f8f8f;
+  color: var(--c-text);
 }
 
 .nav-item {
@@ -106,7 +128,7 @@ a:focus {
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: #8f8f8f;
+  color: var(--c-text);
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
@@ -127,11 +149,11 @@ a:focus {
 }
 
 .tm-navbar.scroll .navbar-toggler {
-  border: 1px solid #8f8f8f;
+  border: 1px solid var(--c-text);
 }
 
 .tm-navbar.scroll .navbar-toggler-icon {
-  color: #8f8f8f;
+  color: var(--c-text);
 }
 
 /* Hero */
@@ -173,6 +195,15 @@ a:focus {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.tm-hero-text-container a {
+  color: #fff;
+}
+.tm-hero-text-container a:hover {
+  color: var(--c-primary-highlighted);
 }
 
 .tm-hero-text-container-inner {
@@ -204,10 +235,12 @@ a:focus {
 .tm-down-arrow-link {
   display: block;
   margin-top: 18%;
+  position: relative;
+  z-index: 2;
 }
 
 .tm-down-arrow {
-  color: #c57e7d;
+  color: var(--c-primary);
   cursor: pointer;
   background: white;
   border-radius: 50%;
@@ -249,7 +282,7 @@ a:focus {
 
 .tm-gallery-container {
   padding-top: 70px;
-  padding-bottom: 120px;
+  padding-bottom: 50px;
 }
 
 .tm-gallery-item {
@@ -453,37 +486,7 @@ figure.effect-honey:hover h2 i {
 
 .tm-contact-item-link i,
 .tm-contact-item-link span {
-  color: white;
   transition: all 0.3s ease;
-}
-
-.tm-contact-item-link:hover i,
-.tm-contact-item-link:hover span {
-  color: var(--c-primary);
-}
-
-.tm-input {
-  padding: 8px 25px;
-  border-radius: 3px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: white;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: white;
 }
 
 .tm-btn-submit {
@@ -576,7 +579,7 @@ p {
   }
 
   .navbar-collapse .nav-link {
-    color: #8f8f8f;
+    color: var(--c-text);
   }
 }
 
