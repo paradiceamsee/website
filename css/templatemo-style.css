@@ -111,7 +111,6 @@ a:focus {
 }
 
 .navbar-brand {
-  color: white;
   font-size: 1.4rem;
   font-weight: bold;
   padding-top: 0;
@@ -121,10 +120,6 @@ a:focus {
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
   color: var(--c-primary);
-}
-
-.tm-navbar.scroll .navbar-brand {
-  color: var(--c-text);
 }
 
 .nav-item {
