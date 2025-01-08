@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -284,7 +284,7 @@
         $(window).scroll(function(){
           var firstTop = $object.offset().top,
               pos = $(window).scrollTop(),
-              yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+              yPos = Math.round((multiplier * (firstTop - pos)) - 26);              
 
           var bg_css = 'center ' + yPos + 'px';
 
@@ -295,7 +295,7 @@
       $(function(){
         // Hero Section - Background Parallax
         background_image_parallax($(".tm-parallax"), 0.30, false);
-        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#contact"), 0.30);   
         
         // Handle window resize
         window.addEventListener('resize', function(){
